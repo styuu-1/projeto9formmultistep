@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+
+    <!-- Titulo -->
+    <title>Tela de cadastro avan.</title>
+    <!-- Titulo -->
+
+    <!-- Meta arquivos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="card, blog pessoal, informação">
+    <meta name="description" content="meu card pessoal feito especialmente para projeto, 01 projeto">
+    <meta name="author" content="Samuel Pacheco Falcão Rodrigues">
+    <meta name="robots" content="index, follow">
+    <!-- Meta arquivos -->
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link css -->
+</head>
+
+<body>
+    <div class="container">
+        <form id="form1">
+            <h3>CRIE UMA CONTA</h3>
+            <input type="text" placeholder="Email" required>
+            <input type="password" placeholder="Senha" required>
+            <input type="password" placeholder="Confirme a senha" required>
+
+            <div class="btn-box">
+                <button type="button" id="next1">Próximo</button>
+            </div>
+        </form>
+
+        <form id="form2">
+            <h3>REDES SOCIAIS</h3>
+            <input type="text" placeholder="Medium">
+            <input type="text" placeholder="Github">
+            <input type="text" placeholder="Linkedin">
+
+            <div class="btn-box">
+                <button type="button" id="back1">Voltar</button>
+                <button type="button" id="next2">Avançar</button>
+            </div>
+        </form>
+
+
+        <form id="form3">
+            <h3>INFORM. PESSOAIS</h3>
+            <input type="text" placeholder="Primeiro nome" required>
+            <input type="text" placeholder="Sobrenomes" required>
+            <input type="text" placeholder="Num. de celular" required>
+
+            <div class="btn-box">
+                <button type="button" id="back2">Voltar</button>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small>Step 1</small></div>
+            <div class="step-col"><small>Step 2</small></div>
+            <div class="step-col"><small>Step 3</small></div>
+        </div>
+
+    </div>
+    <script>
+
+        var Form1 = document.getElementById("form1");
+        var Form2 = document.getElementById("form2");
+        var Form3 = document.getElementById("form3");
+
+        var Next1 = document.getElementById("next1");
+        var Next2 = document.getElementById("next2");
+        var Back1 = document.getElementById("back1");
+        var Back2 = document.getElementById("back2");
+
+        var progress = document.getElementById("progress")
+
+        Next1.onclick = function () {
+            Form1.style.left = "-450px";
+            Form2.style.left = "40px";
+            progress.style.width = "240px";
+        }
+        Back1.onclick = function () {
+            Form1.style.left = "40px";
+            Form2.style.left = "450px";
+            progress.style.width = "120px";
+        }
+        Next2.onclick = function () {
+            Form2.style.left = "-450px";
+            Form3.style.left = "40px";
+            progress.style.width = "360px";
+        }
+        Back2.onclick = function () {
+            Form2.style.left = "40px";
+            Form3.style.left = "450px";
+            progress.style.width = "240px";
+        }
+    </script>
+</body>
+
+</html>
